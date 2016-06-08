@@ -32,6 +32,16 @@
 	box-shadow: $shadow;
 }
 
+@mixin resetAppearance {
+	appearance:none;
+	background:transparent;
+	border:0;
+	padding:0;
+	cursor:pointer;
+	font:inherit;
+	text-align:inherit;
+}
+
 @function randCentered($num) {
 	@return (random($num * 2) - $num);
 }
