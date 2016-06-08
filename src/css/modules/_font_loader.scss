@@ -1,0 +1,35 @@
+.font_loader {
+	position: absolute; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height: 1px;
+	width: 1px; 
+	margin: -1px;
+	padding: 0;
+	border: 0;
+
+	& > span {
+		&:nth-child(1) {
+			font-weight: 100;
+		}
+		&:nth-child(2) {
+			font-weight: 300;
+		}
+		&:nth-child(3) {
+			font-weight: 400;
+		}
+		&:nth-child(4) {
+			font-weight: 500;
+		}
+		&:nth-child(5) {
+			font-weight: 700;
+		}
+		&:nth-child(6) {
+			font-weight: 900;
+		}
+		
+		& > span {
+			font-style: italic;
+		}
+	}
+}

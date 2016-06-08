@@ -43,7 +43,7 @@ body {
 }
 
 .fade {
-	// animation: fadein 2.5s linear;
+	animation: fadein 2.5s linear;
 }
 
 section {
@@ -107,3 +107,5 @@ a {
 		font-style: italic;
 	}
 }
+
+@import "modules/font_loader";
