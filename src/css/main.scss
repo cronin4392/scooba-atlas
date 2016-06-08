@@ -10,6 +10,43 @@ body {
 	animation: fontsize 25s linear infinite alternate;
 }
 
+.container {
+	padding: 2em 6em;
+	max-width: 56em;
+}
+
+@media screen and (max-width: 1000px) {
+	html,
+	body {
+		font-size: 18px;
+	}
+
+	.container {
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.container {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	html,
+	body {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.container {
+		padding: 1em;
+	}
+}
+
 .background {
 	position: fixed;
 	z-index: -1;
@@ -35,11 +72,6 @@ body {
 
 		animation: turnoff 2000ms steps(1) forwards;
 	}
-}
-
-.container {
-	padding: 2em 6em;
-	max-width: 56em;
 }
 
 .fade {
@@ -76,11 +108,6 @@ ul {
 	li {
 		margin: 1em 0;
 
-		h3 em {
-			font-style: normal;
-			font-size: 0.75em;
-		}
-
 		h3,
 		p {
 			margin: 0;
@@ -88,6 +115,16 @@ ul {
 
 		p,
 		a {
+			font-size: 0.75em;
+		}
+
+		h3 {
+			line-height: 1;
+			margin-bottom: 0.2em;
+		}
+
+		h3 em {
+			font-style: normal;
 			font-size: 0.75em;
 		}
 	}
