@@ -1,0 +1,29 @@
+{
+	"lists": [
+		{
+			"title": "work",
+			"items": [
+				{
+					"title": "The Intercept" 
+				},
+				{
+					"title": "HYPERHYPER" 
+				},
+				{
+					"title": "Code & Theory" 
+				},
+				{
+					"title": "Artists for Humanity" 
+				}
+			]
+		},
+		{
+			"title": "education",
+			"items": [
+				{
+					"title": "Parsons"
+				}
+			]
+		}
+	]
+}
