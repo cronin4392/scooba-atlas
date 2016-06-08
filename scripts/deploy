@@ -1,0 +1,8 @@
+echo "Deployment script"
+echo "-----------------------------"
+echo "Building initiated"
+npm run build
+echo "Building complete"
+echo "Deploy initiated"
+scp -r ./build/* private_cronin@sscooba.net:/home/private_cronin/sscooba.net/projects/atlas/
+echo "Deploy complete"
