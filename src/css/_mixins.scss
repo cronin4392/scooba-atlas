@@ -1,0 +1,39 @@
+@mixin jitter($n:6, $random: false) {
+	$timing: 83ms;
+
+	& > * {
+		animation: typechange ($timing * ($n - 1)) infinite alternate;
+	}
+
+	@for $i from 1 through $n {
+		@if $random {
+			$i: random($n);
+		}
+		& > *:nth-child(#{$n+'n+'$i}) {
+			animation-delay: ($timing * ($i - 1));
+		}	
+	}
+}
+
+@mixin randomBoxShadow() {
+	// $shadow: inset #{randCentered(random(100)) + 'vw'} #{randCentered(random(100)) + 'vh'} 0 #{(randCentered(random(10))) + 'em'} yellow;
+	$shadow: "";
+
+	@for $i from 1 through 8 {
+		$color: yellow;
+		@if($i % 2 == 0) {
+			$color: white;
+		}
+
+		@if($i != 1) {
+			$shadow: #{$shadow + ","};
+		}
+		$shadow: #{$shadow} inset #{randCentered(random(100)) + 'vw'} #{randCentered(random(100)) + 'vh'} 0 #{(randCentered(random(10))) + 'em'} $color;
+	}
+
+	box-shadow: $shadow;
+}
+
+@function randCentered($num) {
+	@return (random($num * 2) - $num);
+}

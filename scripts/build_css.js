@@ -36,7 +36,7 @@ try {
 
 }catch(err){
 	process.stderr.write('SCSS COMPILATION ERROR\n');
-	process.stderr.write(err);
+	process.stderr.write(JSON.stringify(err));
 	process.stderr.write('\n');
 	process.exit(code=0);
 }
