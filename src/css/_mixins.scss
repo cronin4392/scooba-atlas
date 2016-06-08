@@ -15,11 +15,10 @@
 }
 
 @mixin randomBoxShadow() {
-	// $shadow: inset #{randCentered(random(100)) + 'vw'} #{randCentered(random(100)) + 'vh'} 0 #{(randCentered(random(10))) + 'em'} yellow;
 	$shadow: "";
 
 	@for $i from 1 through 8 {
-		$color: yellow;
+		$color: $yellow;
 		@if($i % 2 == 0) {
 			$color: white;
 		}

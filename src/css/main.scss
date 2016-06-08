@@ -1,3 +1,4 @@
+@import "variables";
 @import "mixins";
 @import "animations";
 
@@ -18,7 +19,7 @@ body {
 	left: 0;
 	animation: glitch 500ms linear backwards;
 
-	&:hover {
+	html:hover & {
 		animation: none;
 	}
 
@@ -42,7 +43,11 @@ body {
 }
 
 .fade {
-	animation: fadein 2.5s linear;
+	// animation: fadein 2.5s linear;
+}
+
+section {
+	margin: 5em 0;
 }
 
 h1 {
@@ -58,6 +63,7 @@ h2 {
 	font-weight: 500;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
+	margin: 2em 0;
 
 	&:after {
 		content: '';
@@ -66,6 +72,38 @@ h2 {
 	}
 }
 
+ul {
+	li {
+		margin: 1em 0;
+
+		h3 em {
+			font-style: normal;
+			font-size: 0.75em;
+		}
+
+		h3,
+		p {
+			margin: 0;
+		}
+
+		p,
+		a {
+			font-size: 0.75em;
+		}
+	}
+}
+
 p:hover {
 	@include jitter(40, 40ms, true);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 4px solid $yellow;
+
+	&:hover {
+		border-left: 2em solid $yellow;
+		font-style: italic;
+	}
 }

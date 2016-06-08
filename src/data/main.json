@@ -1,27 +1,102 @@
 {
 	"lists": [
 		{
-			"title": "work",
+			"title": "Projects",
 			"items": [
 				{
-					"title": "The Intercept" 
+					"title": "HYPERHYPER.com",
+					"description": "<p>HYPERHYPER®'s' online portfolio</p>",
+					"link": "http://hyperhyper.com",
+					"date": "May. 2016"
 				},
 				{
-					"title": "HYPERHYPER" 
+					"title": "PHHHOTO Support",
+					"description": "<p>PHHHOTO® support portal</p>",
+					"link": "http://support.phhhoto.com",
+					"date": "Jan. 2016"
 				},
 				{
-					"title": "Code & Theory" 
+					"title": "PHHHOTO.com",
+					"description": "<p>PHHHOTO® web interface</p>",
+					"link": "http://phhhoto.com",
+					"date": "Feb. 2015"
 				},
 				{
-					"title": "Artists for Humanity" 
+					"title": "Scooba x Harinezumi",
+					"description": "<p>Scooba and the Superheadz Harinezumi from New York to Western Europe.</p>",
+					"link": "http://www.sscooba.net/harinezumi",
+					"date": "Aug. 2014"
+				},
+				{
+					"title": "Dr Pepper Tuition",
+					"description": "<p>Created the front-end system used since 2014.</p>",
+					"link": "http://drpeppertuition.com",
+					"date": "Jun. 2014"
 				}
 			]
 		},
 		{
-			"title": "education",
+			"title": "Experiences",
 			"items": [
 				{
-					"title": "Parsons"
+					"title": "First Look Media / The Intercept",
+					"link": "http://www.theintercept.com",
+					"description": "<p>Senior engineer.</p>",
+					"date": "2016.05 - Current"
+				},
+				{
+					"title": "Type@Cooper - Calligraphy: The Italic Hand",
+					"description": "<p>A 10 week course covering the italic hand taught by Cara DiEdwardo.</p>",
+					"date": "2016.02 - 2013.04"
+				},
+				{
+					"title": "PHHHOTO / HyperHyper",
+					"link": "http://www.hyperhyper.com",
+					"description": "<p>Front-end lead at the New York office of HyperHyper, the creators of PHHHOTO.</p>",
+					"date": "2015.01 - 2016.05"
+				},
+				{
+					"title": "Code and Theory",
+					"link": "http://www.codeandtheory.com",
+					"description": "<p>Sr. Developer <br>Jr. Developer</p>",
+					"date": "2011.11 - 2014.08"
+				},
+				{
+					"title": "Type@Cooper - Introduction to Sign Painting",
+					"description": "<p>A week long intensive class in traditional sign painting taught by John Downer</p>",
+					"date": "2013.04 - 2013.04"
+				},
+				{
+					"title": "Sociology 101 at Hunter College",
+					"description": "<p>Cool class.</p>",
+					"date": "2013.02 - 2013.05"
+				},
+				{
+					"title": "Alien Kung Fu",
+					"link": "http://www.alienkungfu.com",
+					"description": "<p>Produced website. <br>Created motion graphic assets for video work.</p>",
+					"date": "2007.03 – 2011.08"
+				},
+				{
+					"title": "Parsons The New School for Design",
+					"description": "<p>Design and Technology - 2 semesters <br>Jane Jacobs</p>",
+					"date": "2010.08 - 2011.05"
+				},
+				{
+					"title": "Artists for Humanity",
+					"link": "http://www.afhboston.org",
+					"description": "<p>Graphic Design. <br>Silk Screening.</p>",
+					"date": "2007.03 – 2011.08"
+				},
+				{
+					"title": "Boston Latin School",
+					"description": "<p>7th grade. <br>A.P. Computer Science A <br>Adobe Flash awards 2009 & 2010</p>",
+					"date": "2004.09 - 2010.05"
+				},
+				{
+					"title": "Balfour Academy",
+					"description": "<p>Summer program at Northeastern University for Boston youth. Took courses to prepare for college.</p>",
+					"date": "2006.06 - 2009.08"
 				}
 			]
 		}

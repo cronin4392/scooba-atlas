@@ -34,7 +34,8 @@ try {
 
 }catch(err){
 	process.stderr.write('HTML BUILD ERROR\n');
-	process.stderr.write(err);
-	process.stderr.write('\n');
+	console.log(err);
+	// process.stderr.write(err);
+	// process.stderr.write('\n');
 	process.exit(code=0);
 }
