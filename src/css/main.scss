@@ -50,7 +50,7 @@ h1 {
 	font-weight: 100;
 	height: 2em;
 
-	@include jitter();
+	@include jitter(6, 300ms);
 }
 
 h2 {
@@ -67,5 +67,5 @@ h2 {
 }
 
 p:hover {
-	@include jitter(40, true);
+	@include jitter(40, 40ms, true);
 }

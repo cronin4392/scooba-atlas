@@ -1,8 +1,7 @@
-@mixin jitter($n:6, $random: false) {
-	$timing: 83ms;
-
+@mixin jitter($n:6, $timing: 100ms, $random: false) {
 	& > * {
 		animation: typechange ($timing * ($n - 1)) infinite alternate;
+		// animation: typechange2 ($timing * ($n - 1)) infinite;
 	}
 
 	@for $i from 1 through $n {
