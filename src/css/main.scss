@@ -119,8 +119,8 @@ h1 {
 			opacity: 0;
 		}
 
-		$timing: 2000ms;
-		$count: 12;
+		$timing: 1000ms;
+		$count: 22;
 
 		@include stutter($timing);
 
@@ -183,6 +183,57 @@ h1 {
 			font-weight: 900;
 			font-style: italic;
 			@include stagger($count, (11 * ($timing / $count)), ($timing / $count));
+		}
+
+		&:nth-child(13) {
+			font-weight: 900;
+			font-style: normal;
+			@include stagger($count, (12 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(14) {
+			font-weight: 700;
+			font-style: italic;
+			@include stagger($count, (13 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(15) {
+			font-weight: 700;
+			font-style: normal;
+			@include stagger($count, (14 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(16) {
+			font-weight: 500;
+			font-style: italic;
+			@include stagger($count, (15 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(17) {
+			font-weight: 500;
+			font-style: normal;
+			@include stagger($count, (16 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(18) {
+			font-weight: 400;
+			font-style: italic;
+			@include stagger($count, (17 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(19) {
+			font-weight: 400;
+			font-style: normal;
+			@include stagger($count, (18 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(20) {
+			font-weight: 300;
+			font-style: italic;
+			@include stagger($count, (19 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(21) {
+			font-weight: 300;
+			font-style: normal;
+			@include stagger($count, (20 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(22) {
+			font-weight: 100;
+			font-style: italic;
+			@include stagger($count, (21 * ($timing / $count)), ($timing / $count));
 		}
 	}
 }
