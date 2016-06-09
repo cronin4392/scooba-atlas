@@ -30,6 +30,16 @@
 	}
 }
 
+@keyframes stutter {
+	#{(100/12)}%,
+	100% {
+		opacity: 0;
+	}
+	0% {
+		opacity: 1;
+	}
+}
+
 @keyframes typechange {
 	0% {
 		font-weight: 100;

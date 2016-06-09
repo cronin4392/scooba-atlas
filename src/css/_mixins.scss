@@ -1,15 +1,24 @@
-@mixin jitter($n:6, $timing: 100ms, $random: false) {
+@mixin jitter($n:5, $timing: 100ms, $random: false) {
 	& > * {
 		animation: typechange ($timing * ($n - 1)) infinite alternate;
-		// animation: typechange2 ($timing * ($n - 1)) infinite;
 	}
 
-	@for $i from 1 through $n {
+	@include stagger($n, 0s, $timing, $random);
+}
+
+@mixin stutter($timing: 500ms) {
+	& > * {
+		animation: stutter $timing steps(1, end) infinite forwards;
+	}
+}
+
+@mixin stagger($count: 5, $offset: 0s, $timing: 100ms, $random: false) {
+	@for $i from 1 through $count {
 		@if $random {
-			$i: random($n);
+			$i: random($count);
 		}
-		& > *:nth-child(#{$n+'n+'$i}) {
-			animation-delay: ($timing * ($i - 1));
+		& > *:nth-child(#{$count+'n+'$i}) {
+			animation-delay: ($offset + ($timing * ($i - 1)));
 		}	
 	}
 }

@@ -13,6 +13,7 @@ body {
 .container {
 	padding: 2em 6em;
 	max-width: 56em;
+	word-wrap: break-word;
 }
 
 @media screen and (max-width: 1000px) {
@@ -106,8 +107,84 @@ h1 {
 	font-size: 5em;
 	font-weight: 100;
 	height: 2em;
+	position: relative;
 
-	@include jitter(6, 300ms);
+	& > span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		& > span {
+			opacity: 0;
+		}
+
+		$timing: 2000ms;
+		$count: 12;
+
+		@include stutter($timing);
+
+		&:nth-child(1) {
+			font-weight: 100;
+			font-style: normal;
+			@include stagger($count, (0 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(2) {
+			font-weight: 100;
+			font-style: italic;
+			@include stagger($count, (1 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(3) {
+			font-weight: 300;
+			font-style: normal;
+			@include stagger($count, (2 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(4) {
+			font-weight: 300;
+			font-style: italic;
+			@include stagger($count, (3 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(5) {
+			font-weight: 400;
+			font-style: normal;
+			@include stagger($count, (4 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(6) {
+			font-weight: 400;
+			font-style: italic;
+			@include stagger($count, (5 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(7) {
+			font-weight: 500;
+			font-style: normal;
+			@include stagger($count, (6 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(8) {
+			font-weight: 500;
+			font-style: italic;
+			@include stagger($count, (7 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(9) {
+			font-weight: 700;
+			font-style: normal;
+			@include stagger($count, (8 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(10) {
+			font-weight: 700;
+			font-style: italic;
+			@include stagger($count, (9 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(11) {
+			font-weight: 900;
+			font-style: normal;
+			@include stagger($count, (10 * ($timing / $count)), ($timing / $count));
+		}
+		&:nth-child(12) {
+			font-weight: 900;
+			font-style: italic;
+			@include stagger($count, (11 * ($timing / $count)), ($timing / $count));
+		}
+	}
 }
 
 h2 {
