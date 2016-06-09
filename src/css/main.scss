@@ -106,17 +106,19 @@ section {
 h1 {
 	font-size: 5em;
 	font-weight: 100;
-	height: 2em;
 	position: relative;
 
 	& > span {
 		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
 
 		& > span {
 			opacity: 0;
+		}
+
+		& + span {
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 
 		$timing: 1000ms;
@@ -175,18 +177,18 @@ h1 {
 			@include stagger($count, (9 * ($timing / $count)), ($timing / $count));
 		}
 		&:nth-child(11) {
-			font-weight: 900;
+			font-weight: 700;
 			font-style: normal;
 			@include stagger($count, (10 * ($timing / $count)), ($timing / $count));
 		}
 		&:nth-child(12) {
-			font-weight: 900;
+			font-weight: 700;
 			font-style: italic;
 			@include stagger($count, (11 * ($timing / $count)), ($timing / $count));
 		}
 
 		&:nth-child(13) {
-			font-weight: 900;
+			font-weight: 700;
 			font-style: normal;
 			@include stagger($count, (12 * ($timing / $count)), ($timing / $count));
 		}
@@ -254,7 +256,7 @@ h2 {
 
 ul {
 	li {
-		margin: 1em 0;
+		margin: 3em 0;
 
 		h3,
 		p {
