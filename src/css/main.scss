@@ -74,10 +74,11 @@ a {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	
 	animation: glitch 500ms linear backwards;
 
-	html:hover &,
-	.clicker:active + & {
+	html.glitch &,
+	html:hover & {
 		animation: none;
 	}
 

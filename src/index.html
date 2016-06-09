@@ -37,5 +37,14 @@
 		</main>
 		{% include 'views/partials/font_loader.html' %}
 		{% include 'views/partials/ga.html' %}
+		<script>
+			var htmlElement = document.getElementsByTagName("html")[0];
+			document.addEventListener('touchstart', function() {
+				htmlElement.classList.add('glitch');
+				setTimeout(function() {
+					htmlElement.classList.remove('glitch');
+				}, 10);
+			});
+		</script>
 	</body>
 </html>
