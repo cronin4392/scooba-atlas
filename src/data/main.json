@@ -2,7 +2,7 @@
 	"description": "Kung fu fightin' calligraphy writin' developer stationed in NYC. My style is chaos mixed in with a bit of structure. I code with speed and visual efficiency. Drop a line if you're so inclined.",
 	"lists": [
 		{
-			"title": "Projects",
+			"title": "Websites",
 			"items": [
 				{
 					"title": "HYPERHYPER.com",
@@ -33,6 +33,26 @@
 					"description": "<p>Created the front-end system used since 2014.</p>",
 					"link": "http://drpeppertuition.com",
 					"date": "Jun. 2014"
+				}
+			]
+		},
+		{
+			"title": "Codes",
+			"items": [
+				{
+					"title": "addEventListener('transition')",
+					"description": "<p>Add javascript events for CSS transtions and animations.</p>",
+					"link": "https://github.com/cronin4392/CSS-Animation-and-Transition-Listeners"
+				},
+				{
+					"title": "video.addEventListener('buffer')",
+					"description": "<p>Add javascript event for HTML Video buffering.</p>",
+					"link": "https://github.com/cronin4392/video-buffer-event"
+				},
+				{
+					"title": "addEventListener('clickout')",
+					"description": "<p>Add javascript event clicking out of an element.</p>",
+					"link": "https://github.com/cronin4392/clickout"
 				}
 			]
 		},
