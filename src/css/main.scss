@@ -211,30 +211,34 @@ ul {
 	overflow-x: scroll;
 	-webkit-overflow-scrolling: touch;
 
+	$scrollbarSize: 1.5em;
 	&::-webkit-scrollbar {
 		display: block;
 		position: relative;
-		height: 1em;
-		width: 1em;
+		height: $scrollbarSize;
+		width: $scrollbarSize;
 	}
 	&::-webkit-scrollbar-track {
-		display: none;
+		border-bottom: 1px solid #f7f7f7;
 	}
 	&::-webkit-scrollbar-track-piece {
 		display: none;
 	}
 	&::-webkit-scrollbar-thumb {
-		display: none;
+		background: #f7f7f7;
+		&:hover {
+			background: #e5e5e5;
+		}
 	}
 	&::-webkit-scrollbar-button:horizontal:end:increment,
 	&::-webkit-scrollbar-button:horizontal:end:decrement {
 		display: block;
-		height: 1em;
-		width: 1em;
+		height: $scrollbarSize;
+		width: $scrollbarSize;
 		cursor: pointer;
 		border: 1px solid #000000;
 
-		background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='5' width='5' fill='red'><text x='0' y='5' fill='black' font-size='10'>&lt;</text></svg>");
+		background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10' width='10' fill='red'><text x='0' y='10' fill='black' font-size='20'>&lt;</text></svg>");
 		background-position: center center;
 		background-repeat: no-repeat;
 
@@ -244,7 +248,7 @@ ul {
 	}
 	&::-webkit-scrollbar-button:horizontal:end:increment {
 		border-left: 0;
-		background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='5' width='5' fill='red'><text x='0' y='5' fill='black' font-size='10'>&gt;</text></svg>");
+		background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10' width='10' fill='red'><text x='0' y='10' fill='black' font-size='20'>&gt;</text></svg>");
 	}
 
 	.item {
