@@ -14,7 +14,7 @@ body {
 
 .container {
 	padding: 2em 6em;
-	max-width: 56em;
+	max-width: 48em;
 	word-wrap: break-word;
 }
 
@@ -26,9 +26,9 @@ body {
 	width: auto;
 }
 
-@media screen and (min-width: (56 * 20px)) {
+@media screen and (min-width: (48 * 20px)) {
 	.uncontainer {
-		margin-right: calc((-100vw + 56em) + 6em);
+		margin-right: calc((-100vw + 48em) + 6em);
 	}
 }
 
