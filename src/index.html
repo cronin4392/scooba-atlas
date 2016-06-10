@@ -15,6 +15,8 @@
 	</head>
 	<body>
 		<div class="background"></div>
+		<div class="s"></div>
+		<div class="cover"></div>
 		<main class="container">
 			<h1>{{ 'scooba' | duplicate(23) | safe }}</h1>
 			<div class="fade">
@@ -35,6 +37,10 @@
 					</ul>
 				</section>
 				{% endfor %}
+				<section>
+					<h2>Contacts</h2>
+					<a href="http://github.com/cronin4392">Github</a>
+				</section>
 			</div>
 		</main>
 		{% include 'views/partials/font_loader.html' %}

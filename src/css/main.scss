@@ -85,9 +85,50 @@ body {
 	}
 }
 
+.s {
+	position: fixed;
+	z-index: -2;
+	left: 43vw;
+	top: 5vh;
+	width: 30vw;
+	height: 42vw;
+
+	$size: 1.25em;
+	$color: #ffffff;
+
+	box-shadow: inset 0em 0em 0 $size $color;
+
+	opacity: 0;
+	animation: turnoff 500ms steps(1) forwards;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 33%;
+		right: 0;
+		height: ($size * 2);
+		width: 33%;
+		box-shadow: inset $size (-$size) 0 0em $color;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 33%;
+		left: 0;
+		height: ($size * 2);
+		width: 33%;
+		box-shadow: inset (-$size) $size 0 0em $color;
+	}
+
+	html.glitch &,
+	html:hover & {
+		animation: none;
+	}
+}
+
 .background {
 	position: fixed;
-	z-index: -1;
+	z-index: -3;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -99,19 +140,18 @@ body {
 	html:hover & {
 		animation: none;
 	}
+}
 
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: 1;
-		background-color: #ffffff;
+.cover {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	background-color: #ffffff;
 
-		animation: turnoff 2000ms steps(1) forwards;
-	}
+	animation: turnoff 1000ms steps(1) forwards;
 }
 
 .fade {
