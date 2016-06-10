@@ -191,6 +191,7 @@ ul {
 	position: relative;
 	white-space: nowrap;
 	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
 
 	.item {
 		display: inline-block;
