@@ -249,6 +249,21 @@ ul {
 
 .item {
 	margin-bottom: 2.5em;
+
+	&-link {
+		color: inherit;
+		text-decoration: none;
+
+		.item-title {
+			@include underline($yellow, 4px, -2px);
+			padding-bottom: 4px;
+		}
+
+		&:hover .item-title {
+			@include underline($yellow, 12px, -10px);
+		}
+	}
+
 	&-title,
 	&-text {
 		margin: 0;
@@ -258,6 +273,7 @@ ul {
 		font-weight: 500;
 		line-height: 1.5;
 		margin-bottom: 0.2em;
+		display: inline;
 	}
 
 	&-text {
@@ -287,13 +303,12 @@ p:hover {
 	@include jitter(40, 40ms, true);
 }
 
-a {
+.text_link {
 	color: inherit;
 	text-decoration: none;
 
 	@include underline($yellow, 4px, -2px);
 	padding-bottom: 4px;
-	transition: background 200ms;
 
 	&:hover {
 		@include underline($yellow, 12px, -10px);

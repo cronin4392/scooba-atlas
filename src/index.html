@@ -27,13 +27,15 @@
 					<ul class="list uncontainer">
 						{% for item in list['items'] %}
 						<li class="item">
-							<h3 class="item-title">
-								{% if item['link'] %}<a href="{{item['link']}}" rel="external">{% endif %}{{item['title']}}{% if item['link'] %}</a>{% endif %}
-							</h3>
-							<div class="item-text">{{item['description'] | safe}}</div>
-							{% if item['date'] %}
-							<date class="item-date">[{{item['date']}}]</date>
-							{% endif %}
+							{% if item['link'] %}<a href="{{item['link']}}" class="item-link" rel="external">{% endif %}
+								<h3 class="item-title">
+									{{item['title']}}
+								</h3>
+								<div class="item-text">{{item['description'] | safe}}</div>
+								{% if item['date'] %}
+								<date class="item-date">[{{item['date']}}]</date>
+								{% endif %}
+							{% if item['link'] %}</a>{% endif %}
 						</li>
 						{% endfor %}
 					</ul>
