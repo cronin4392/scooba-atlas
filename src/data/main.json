@@ -8,18 +8,21 @@
 					"title": "HYPERHYPER.com",
 					"description": "<p>HYPERHYPER®'s online portfolio</p>",
 					"link": "http://hyperhyper.com",
+					"image": "projects/HH.svg",
 					"date": "May. 2016"
 				},
 				{
 					"title": "PHHHOTO Support",
 					"description": "<p>PHHHOTO® support portal</p>",
 					"link": "http://support.phhhoto.com",
+					"image": "projects/PHHHOTO.svg",
 					"date": "Jan. 2016"
 				},
 				{
 					"title": "PHHHOTO.com",
 					"description": "<p>PHHHOTO® web interface</p>",
 					"link": "http://phhhoto.com",
+					"image": "projects/PHHHOTO.svg",
 					"date": "Feb. 2015"
 				},
 				{
@@ -62,28 +65,33 @@
 				{
 					"title": "First Look Media / The Intercept",
 					"link": "http://www.theintercept.com",
+					"image": "projects/FLM.png",
 					"description": "<p>Senior engineer.</p>",
 					"date": "2016.05 - Current"
 				},
 				{
 					"title": "Type@Cooper - Calligraphy: The Italic Hand",
+					"image": "projects/type_at_cooper.svg",
 					"description": "<p>A 10 week course covering the italic hand taught by Cara DiEdwardo.</p>",
 					"date": "2016.02 - 2013.04"
 				},
 				{
 					"title": "PHHHOTO / HyperHyper",
 					"link": "http://www.hyperhyper.com",
+					"image": "projects/HH.svg",
 					"description": "<p>Front-end lead at the New York office of HyperHyper, the creators of PHHHOTO.</p>",
 					"date": "2015.01 - 2016.05"
 				},
 				{
 					"title": "Code and Theory",
 					"link": "http://www.codeandtheory.com",
+					"image": "projects/C&T.png",
 					"description": "<p>Sr. Developer <br>Jr. Developer</p>",
 					"date": "2011.11 - 2014.08"
 				},
 				{
 					"title": "Type@Cooper - Introduction to Sign Painting",
+					"image": "projects/type_at_cooper.svg",
 					"description": "<p>A week long intensive class in traditional sign painting taught by John Downer</p>",
 					"date": "2013.04 - 2013.04"
 				},

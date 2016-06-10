@@ -28,6 +28,11 @@
 						{% for item in list['items'] %}
 						<li class="item">
 							{% if item['link'] %}<a href="{{item['link']}}" class="item-link" rel="external">{% endif %}
+								{% if item['image'] %}
+								<div class="item-image">
+									<img src="images/{{item['image']}}" alt="" />
+								</div>
+								{% endif %}
 								<h3 class="item-title">
 									{{item['title']}}
 								</h3>
