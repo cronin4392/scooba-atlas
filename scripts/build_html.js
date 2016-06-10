@@ -14,6 +14,18 @@ var split = function(input, size) {
 	return output;
 }
 swig.setFilter('split', split);
+var duplicate = function(input, times) {
+	times = typeof times !== 'undefined' ? times : 2;
+	
+	var output = '';
+
+	for(var i=0; i<times; i++) {
+		output += '<span>' + split(input) + '</span>';
+	}
+	
+	return output;
+}
+swig.setFilter('duplicate', duplicate);
 
 var input_file = "./src/index.html";
 var output_file = './build/index.html';

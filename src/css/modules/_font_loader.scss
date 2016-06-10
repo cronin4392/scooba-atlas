@@ -27,9 +27,9 @@
 		&:nth-child(6) {
 			font-weight: 900;
 		}
-		
-		& > span {
-			font-style: italic;
-		}
+	}
+
+	& > span > span {
+		font-style: italic;
 	}
 }
