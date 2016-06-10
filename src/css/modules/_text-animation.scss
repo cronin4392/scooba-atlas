@@ -1,6 +1,6 @@
-h1 {
+.jitter-text {
 	@include jitter(6, 100ms);
-	height: 2em;
+	height: 1.5em;
 
 	// & > span {
 	// 	display: block;
