@@ -18,6 +18,11 @@ try {
 		sourceComments: debug
 	});
 	var prefixed = autoprefixer.process(render_css.css).css;
+
+	if (!fs.existsSync('./build/css')){
+		fs.mkdirSync('./build/css');
+	}
+
 	if (debug) {
 		// Development
 		fs.writeFile(output_file, prefixed, function(err,data){
