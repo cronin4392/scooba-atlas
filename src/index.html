@@ -18,7 +18,7 @@
 		<div class="s"></div>
 		<div class="cover"></div>
 		<main class="container">
-			<h1>{{ 'scooba' | duplicate(23) | safe }}</h1>
+			<h1>{{ 'scooba' | split() | safe }}</h1>
 			<div class="fade">
 				<p>{{ description | split() | safe }}</p>
 				{% for list in lists %}

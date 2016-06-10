@@ -20,6 +20,9 @@ body {
 	padding: 2em 6em;
 	// max-width: 48em;
 	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
 .uncontainer {
