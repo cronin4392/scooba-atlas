@@ -22,14 +22,14 @@
 				{% for list in lists %}
 				<section>
 					<h2>{{ list['title'] }}</h2>
-					<ul>
+					<ul class="list uncontainer">
 						{% for item in list['items'] %}
-						<li>
-							<h3>
+						<li class="item">
+							<h3 class="item-title">
 								{% if item['link'] %}<a href="{{item['link']}}">{% endif %}{{item['title']}}{% if item['link'] %}</a>{% endif %}
-								<em>[{{item['date']}}]</em>
 							</h3>
-							{{item['description'] | safe}}
+							<div class="item-text">{{item['description'] | safe}}</div>
+							<date class="item-date">[{{item['date']}}]</date>
 						</li>
 						{% endfor %}
 					</ul>

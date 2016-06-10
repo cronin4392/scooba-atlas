@@ -8,12 +8,28 @@ body {
 	font-size: 20px;
 	line-height: 2;
 	animation: fontsize 25s linear infinite alternate;
+	margin: 0;
+	padding: 0;
 }
 
 .container {
 	padding: 2em 6em;
 	max-width: 56em;
 	word-wrap: break-word;
+}
+
+.uncontainer {
+	margin-left: -6em;
+	margin-right: -6em;
+	padding-left: 6em;
+	padding-right: 6em;
+	width: auto;
+}
+
+@media screen and (min-width: (56 * 20px)) {
+	.uncontainer {
+		margin-right: calc((-100vw + 56em) + 6em);
+	}
 }
 
 @media screen and (max-width: 1000px) {
@@ -26,10 +42,24 @@ body {
 		padding-left: 4em;
 		padding-right: 4em;
 	}
+
+	.uncontainer {
+		margin-left: -4em;
+		margin-right: -4em;
+		padding-left: 4em;
+		padding-right: 4em;
+	}
 }
 
 @media screen and (max-width: 700px) {
 	.container {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.uncontainer {
+		margin-left: -2em;
+		margin-right: -2em;
 		padding-left: 2em;
 		padding-right: 2em;
 	}
@@ -45,6 +75,13 @@ body {
 @media screen and (max-width: 400px) {
 	.container {
 		padding: 1em;
+	}
+
+	.uncontainer {
+		margin-left: -1em;
+		margin-right: -1em;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 }
 
@@ -89,137 +126,6 @@ h1 {
 	font-size: 5em;
 	font-weight: 100;
 	position: relative;
-
-	& > span {
-		display: block;
-
-		& > span {
-			opacity: 0;
-		}
-
-		& + span {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-
-		$timing: 1000ms;
-		$count: 22;
-
-		@include stutter($timing);
-
-		&:nth-child(1) {
-			font-weight: 100;
-			font-style: normal;
-			@include stagger($count, (0 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(2) {
-			font-weight: 100;
-			font-style: italic;
-			@include stagger($count, (1 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(3) {
-			font-weight: 300;
-			font-style: normal;
-			@include stagger($count, (2 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(4) {
-			font-weight: 300;
-			font-style: italic;
-			@include stagger($count, (3 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(5) {
-			font-weight: 400;
-			font-style: normal;
-			@include stagger($count, (4 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(6) {
-			font-weight: 400;
-			font-style: italic;
-			@include stagger($count, (5 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(7) {
-			font-weight: 500;
-			font-style: normal;
-			@include stagger($count, (6 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(8) {
-			font-weight: 500;
-			font-style: italic;
-			@include stagger($count, (7 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(9) {
-			font-weight: 700;
-			font-style: normal;
-			@include stagger($count, (8 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(10) {
-			font-weight: 700;
-			font-style: italic;
-			@include stagger($count, (9 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(11) {
-			font-weight: 700;
-			font-style: normal;
-			@include stagger($count, (10 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(12) {
-			font-weight: 700;
-			font-style: italic;
-			@include stagger($count, (11 * ($timing / $count)), ($timing / $count));
-		}
-
-		&:nth-child(13) {
-			font-weight: 700;
-			font-style: normal;
-			@include stagger($count, (12 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(14) {
-			font-weight: 700;
-			font-style: italic;
-			@include stagger($count, (13 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(15) {
-			font-weight: 700;
-			font-style: normal;
-			@include stagger($count, (14 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(16) {
-			font-weight: 500;
-			font-style: italic;
-			@include stagger($count, (15 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(17) {
-			font-weight: 500;
-			font-style: normal;
-			@include stagger($count, (16 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(18) {
-			font-weight: 400;
-			font-style: italic;
-			@include stagger($count, (17 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(19) {
-			font-weight: 400;
-			font-style: normal;
-			@include stagger($count, (18 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(20) {
-			font-weight: 300;
-			font-style: italic;
-			@include stagger($count, (19 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(21) {
-			font-weight: 300;
-			font-style: normal;
-			@include stagger($count, (20 * ($timing / $count)), ($timing / $count));
-		}
-		&:nth-child(22) {
-			font-weight: 100;
-			font-style: italic;
-			@include stagger($count, (21 * ($timing / $count)), ($timing / $count));
-		}
-	}
 }
 
 h2 {
@@ -237,27 +143,49 @@ h2 {
 }
 
 ul {
-	li {
-		margin: 3em 0;
+	margin: 1em 0;
+	padding: 0;
+}
 
-		h3,
-		p {
-			margin: 0;
-		}
+.list {
+	position: relative;
+	white-space: nowrap;
+	overflow: scroll;
 
-		p {
-			font-size: 0.75em;
-		}
+	.item {
+		display: inline-block;
+		vertical-align: top;
+		white-space: normal;
+		width: 34%;
+		max-width: 320px;
+		min-width: 160px;
+		margin-right: 2em;
+	}
+}
 
-		h3 {
-			line-height: 1;
-			margin-bottom: 0.2em;
-		}
+.item {
+	margin-bottom: 2.5em;
+	&-title,
+	&-text {
+		margin: 0;
+	}
 
-		h3 em {
-			font-style: normal;
-			font-size: 0.75em;
-		}
+	&-title {
+		line-height: 1.5;
+		margin-bottom: 0.2em;
+	}
+
+	&-text {
+		font-size: 0.75em;
+	}
+
+	&-date {
+		display: block;
+		font-weight: 100;
+		font-size: 0.75em;
+		margin-top: 1em;
+
+		white-space: nowrap;
 	}
 }
 
@@ -278,4 +206,5 @@ a {
 	}
 }
 
-@import "modules/font_loader";
+@import "modules/text-animation";
+@import "modules/font-loader";
