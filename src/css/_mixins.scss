@@ -1,3 +1,7 @@
+@mixin underline($color: #000000, $size: 1px, $offset: 0px) {
+	background: repeating-linear-gradient(180deg,transparent,transparent calc(1em + #{$offset}),$color calc(1em + #{$offset}),$color calc(1em + #{($size + $offset)}))
+}
+
 @mixin jitter($n:5, $timing: 100ms, $random: false) {
 	& > * {
 		animation: typechange ($timing * ($n - 1)) infinite alternate;

@@ -25,9 +25,11 @@
 					<ul>
 						{% for item in list['items'] %}
 						<li>
-							<h3>{{item['title']}} <em>[{{item['date']}}]</em></h3>
+							<h3>
+								{% if item['link'] %}<a href="{{item['link']}}">{% endif %}{{item['title']}}{% if item['link'] %}</a>{% endif %}
+								<em>[{{item['date']}}]</em>
+							</h3>
 							{{item['description'] | safe}}
-							{% if item['link'] %}<a href="{{item['link']}}">Visit</a>{% endif %}
 						</li>
 						{% endfor %}
 					</ul>
