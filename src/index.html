@@ -28,7 +28,7 @@
 						{% for item in list['items'] %}
 						<li class="item">
 							<h3 class="item-title">
-								{% if item['link'] %}<a href="{{item['link']}}">{% endif %}{{item['title']}}{% if item['link'] %}</a>{% endif %}
+								{% if item['link'] %}<a href="{{item['link']}}" rel="external">{% endif %}{{item['title']}}{% if item['link'] %}</a>{% endif %}
 							</h3>
 							<div class="item-text">{{item['description'] | safe}}</div>
 							{% if item['date'] %}
@@ -40,9 +40,12 @@
 				</section>
 				{% endfor %}
 				<section>
-					<h2>Contacts</h2>
-					<a href="http://github.com/cronin4392">Github</a>
+					<h2>Boo ya ca-sha</h2>
+					<p class="small">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec est scelerisque, sagittis mi in, feugiat sem. Sed ac augue nulla. Mauris malesuada turpis et neque ornare eleifend. Suspendisse quis pellentesque sem. Curabitur sed accumsan sapien, ut bibendum justo. In in diam nisl. Praesent quis nibh sem.
+					</p>
 				</section>
+				<h1>Stephen Cronin</h1>
 			</div>
 		</main>
 		{% include 'views/partials/font_loader.html' %}

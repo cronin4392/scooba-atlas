@@ -275,6 +275,11 @@ p {
 	max-width: 48em;
 }
 
+p.small {
+	font-size: 0.75em;
+	max-width: 64em;
+}
+
 p:hover {
 	@include jitter(40, 40ms, true);
 }
