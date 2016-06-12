@@ -208,8 +208,10 @@ ul {
 
 	position: relative;
 	white-space: nowrap;
-	overflow-x: scroll;
+	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
+
+	border-bottom: 1px solid #f7f7f7;
 
 	$scrollbarSize: 1.5em;
 	&::-webkit-scrollbar {
@@ -219,15 +221,15 @@ ul {
 		width: $scrollbarSize;
 	}
 	&::-webkit-scrollbar-track {
-		border-bottom: 1px solid #f7f7f7;
+		
 	}
 	&::-webkit-scrollbar-track-piece {
 		display: none;
 	}
 	&::-webkit-scrollbar-thumb {
-		background: #f7f7f7;
+		border-bottom: 0.5em solid #f7f7f7;
 		&:hover {
-			background: #e5e5e5;
+			border-bottom: 0.5em solid #e5e5e5;
 		}
 	}
 	&::-webkit-scrollbar-button:horizontal:end:increment,
