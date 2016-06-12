@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title>sssssssssc</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+		<meta property="og:title" content="sssssssssc" />
+		<meta property="og:description" content="preview.html" />
+		<meta property="og:image" content="http://project.sscooba.net/atlas/images/image.png" />
+
+		<link rel="stylesheet" type="text/css" href="fonts/atlas.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<div class="background"></div>
+		<div class="s"></div>
+		<div class="cover"></div>
+		<main class="container">
+			{% block content %}{% endblock %}
+		</main>
+		{% include 'partials/font_loader.html' %}
+		{% include 'partials/ga.html' %}
+		<script>
+			// var htmlElement = document.getElementsByTagName("html")[0];
+			// document.addEventListener('touchstart', function() {
+			// 	htmlElement.classList.add('glitch');
+			// 	setTimeout(function() {
+			// 		htmlElement.classList.remove('glitch');
+			// 	}, 10);
+			// });
+		</script>
+	</body>
+</html>
