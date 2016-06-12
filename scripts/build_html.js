@@ -1,3 +1,4 @@
+var async = require('async');
 var swig = require('swig');
 var fs = require('fs');
 var debug = false;
@@ -27,9 +28,10 @@ var duplicate = function(input, times) {
 }
 swig.setFilter('duplicate', duplicate);
 
-var input_file = "./src/index.html";
-var output_file = './build/index.html';
+var file_sets = [['./src/index.html', './build/index.html'], ['./src/blog.html', './build/blog.html']];
 var data_file = './src/data/main.json';
+var stevie_file = './src/views/partials/stevie-alt.txt';
+var stevie_file_small = './src/views/partials/stevie-medium.txt';
 
 if (process.env.NODE_ENV !== "production"){
 	debug = true;
@@ -37,11 +39,21 @@ if (process.env.NODE_ENV !== "production"){
 
 try {
 	var data = JSON.parse(fs.readFileSync(data_file));
-	var template = swig.compileFile(input_file);
-	var html = template(data);
+	var stevie = String(fs.readFileSync(stevie_file));
+	var stevie_small = String(fs.readFileSync(stevie_file_small));
+	data['stevie'] = stevie;
+	data['stevie_small'] = stevie_small;
 
-	fs.writeFile(output_file, html, function(err,data){
-		process.exit(code=0);
+	async.each(file_sets, function(files) {
+		var input_file = files[0];
+		var output_file = files[1];
+
+		var template = swig.compileFile(input_file);
+		var html = template(data);
+
+		fs.writeFile(output_file, html, function(err,data){
+			process.exit(code=0);
+		});
 	});
 
 }catch(err){

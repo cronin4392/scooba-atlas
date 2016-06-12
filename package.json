@@ -17,6 +17,7 @@
   "author": "Stephen Cronin",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.0.0-rc.6",
     "autoprefixer": "^6.3.6",
     "combine-mq": "^0.8.1",
     "fs": "0.0.2",
