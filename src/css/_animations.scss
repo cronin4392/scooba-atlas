@@ -13,7 +13,7 @@
 	0% {
 		opacity: 0;
 	}
-	66.6666% {
+	75% {
 		opacity: 0;
 	}
 	100% {
@@ -27,6 +27,15 @@
 	}
 	100% {
 		opacity: 0;
+	}
+}
+
+@keyframes turnon {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 

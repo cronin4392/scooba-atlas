@@ -1,0 +1,106 @@
+.background {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.s {
+	position: fixed;
+	z-index: 2;
+	left: 43vw;
+	top: 5vh;
+	width: 30vw;
+	height: 42vw;
+
+	$size: 1.25em;
+	$color: #ffffff;
+
+	box-shadow: inset 0em 0em 0 $size $color;
+
+	opacity: 0;
+	animation: turnoff 500ms steps(1) forwards;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 33%;
+		right: 0;
+		height: ($size * 2);
+		width: 33%;
+		box-shadow: inset $size (-$size) 0 0em $color;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 33%;
+		left: 0;
+		height: ($size * 2);
+		width: 33%;
+		box-shadow: inset (-$size) $size 0 0em $color;
+	}
+
+	html.glitch &,
+	html:hover & {
+		animation: none;
+	}
+}
+
+.glitch {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	animation: glitch 500ms linear backwards;
+
+	html.glitch &,
+	html:hover & {
+		animation: none;
+	}
+}
+
+.stevie {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: -12;
+	font-size: 7px;
+	font-weight: 700;
+	line-height: 0.6;
+	white-space: pre;
+	text-align: right;
+
+	animation: fadein 1000ms linear; // typechange 500ms infinite alternate,
+	opacity: 0.5;
+}
+
+.cover-fade {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -10;
+
+	$offset: 60vh;
+	// background: linear-gradient(180deg,
+	// 	                        rgba(255,255,255,0.2) 0%,
+	// 	                        rgba(255,255,255,0.75) $offset,
+	// 	                        rgba(255,255,255,1) (2 * $offset),
+	// 	                        rgba(255,255,255,1) calc(100% - #{(2 * $offset)}),
+	// 	                        rgba(255,255,255,0) calc(100% - #{$offset}),
+	// 	                        rgba(255,255,255,0) 100%
+	// 	                       );
+
+	background: linear-gradient(180deg,
+		                        rgba(255,255,255,0.2) 0%,
+		                        rgba(255,255,255,0.75) $offset,
+		                        rgba(255,255,255,1) (2 * $offset),
+		                        rgba(255,255,255,1) 100%
+		                       );
+}

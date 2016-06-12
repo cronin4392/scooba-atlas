@@ -13,12 +13,12 @@ body {
 }
 
 body {
+	position: relative;
 	overflow-x: hidden;
 }
 
 .container {
 	padding: 2em 6em;
-	// max-width: 48em;
 	word-wrap: break-word;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -31,12 +31,6 @@ body {
 	padding-left: 6em;
 	padding-right: 6em;
 	width: auto;
-}
-
-@media screen and (min-width: (48 * 20px)) {
-	.uncontainer {
-		// margin-right: calc((-100vw + 48em) + 6em);
-	}
 }
 
 @media screen and (max-width: 1000px) {
@@ -92,77 +86,12 @@ body {
 	}
 }
 
-.s {
-	position: fixed;
-	z-index: -2;
-	left: 43vw;
-	top: 5vh;
-	width: 30vw;
-	height: 42vw;
-
-	$size: 1.25em;
-	$color: #ffffff;
-
-	box-shadow: inset 0em 0em 0 $size $color;
-
-	opacity: 0;
-	animation: turnoff 500ms steps(1) forwards;
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: 33%;
-		right: 0;
-		height: ($size * 2);
-		width: 33%;
-		box-shadow: inset $size (-$size) 0 0em $color;
-	}
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: 33%;
-		left: 0;
-		height: ($size * 2);
-		width: 33%;
-		box-shadow: inset (-$size) $size 0 0em $color;
-	}
-
-	html.glitch &,
-	html:hover & {
-		animation: none;
-	}
-}
-
-.background {
-	position: fixed;
-	z-index: -3;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	
-	animation: glitch 500ms linear backwards;
-
-	html.glitch &,
-	html:hover & {
-		animation: none;
-	}
-}
-
-.cover {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: -1;
-	background-color: #ffffff;
-
-	animation: turnoff 1000ms steps(1) forwards;
+.hide-on-load {
+	animation: turnon 1000ms steps(1) forwards;
 }
 
 .fade {
-	// animation: fadein 2.5s linear;
+	animation: fadein 3s linear;
 }
 
 img {
@@ -174,11 +103,20 @@ section {
 }
 
 h1 {
-	font-size: 5em;
+	font-size: 4em;
 	font-weight: 100;
 	line-height: 1.5;
 	position: relative;
 	margin: 1em 0;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	nav & {
+		font-size: 5em;
+	}
 }
 
 h2 {
@@ -200,137 +138,9 @@ ul {
 	padding: 0;
 }
 
-.list {
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-top: 1em;
-	padding-bottom: 1em;
-
-	position: relative;
-	white-space: nowrap;
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-
-	border-bottom: 1px solid #f7f7f7;
-
-	$scrollbarSize: 1.5em;
-	&::-webkit-scrollbar {
-		display: block;
-		position: relative;
-		height: $scrollbarSize;
-		width: $scrollbarSize;
-	}
-	&::-webkit-scrollbar-track {
-		
-	}
-	&::-webkit-scrollbar-track-piece {
-		display: none;
-	}
-	&::-webkit-scrollbar-thumb {
-		border-bottom: 0.5em solid #f7f7f7;
-		&:hover {
-			border-bottom: 0.5em solid #e5e5e5;
-		}
-	}
-	&::-webkit-scrollbar-button:horizontal:end:increment,
-	&::-webkit-scrollbar-button:horizontal:end:decrement {
-		display: block;
-		height: $scrollbarSize;
-		width: $scrollbarSize;
-		cursor: pointer;
-		border: 1px solid #000000;
-
-		background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10' width='10' fill='red'><text x='0' y='10' fill='black' font-size='20'>&lt;</text></svg>");
-		background-position: center center;
-		background-repeat: no-repeat;
-
-		&:hover {
-			background-color: $yellow;
-		}
-	}
-	&::-webkit-scrollbar-button:horizontal:end:increment {
-		border-left: 0;
-		background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10' width='10' fill='red'><text x='0' y='10' fill='black' font-size='20'>&gt;</text></svg>");
-	}
-
-	.item {
-		display: inline-block;
-		vertical-align: top;
-		white-space: normal;
-		width: 34%;
-		max-width: 320px;
-		min-width: 200px;
-		margin-right: 2em;
-	}
-}
-
-.item {
-	position: relative;
-	margin-bottom: 2.5em;
-
-	&-link {
-		display: block;
-		color: inherit;
-		text-decoration: none;
-
-		.item-title {
-			@include underline($yellow, 4px, -2px);
-			padding-bottom: 4px;
-		}
-
-		&:hover .item-title {
-			@include underline($yellow, 12px, -10px);
-		}
-	}
-
-	&-image {
-		position: absolute;
-		top: 1em;
-		left: 1em;
-		width: 10em;
-		height: 10em;
-		z-index: -1;
-		opacity: 0.05;
-		visibility: hidden;
-
-		img {
-			position: absolute;
-			right: 0;
-			bottom: 2em;
-		}
-	}
-
-	&:hover &-image {
-		visibility: visible;
-	}
-
-	&-title,
-	&-text {
-		margin: 0;
-	}
-
-	&-title {
-		font-weight: 500;
-		line-height: 1.5;
-		margin-bottom: 0.2em;
-		display: inline;
-	}
-
-	&-text {
-		font-size: 0.75em;
-	}
-
-	&-date {
-		display: block;
-		font-weight: 100;
-		font-size: 0.75em;
-		margin-top: 1em;
-
-		white-space: nowrap;
-	}
-}
 
 p {
+	text-shadow: 1px 1px 0px #ffffff;
 	max-width: 48em;
 }
 
@@ -341,6 +151,13 @@ p.small {
 
 p:hover {
 	@include jitter(40, 40ms, true);
+}
+
+pre {
+	font-family: 'Atlas Typewriter Web', monospace;
+	font-size: 0.75em;
+	padding: 1.33333em;
+	background: #f7f7f7;
 }
 
 .text_link {
@@ -355,5 +172,7 @@ p:hover {
 	}
 }
 
+@import "modules/list";
+@import "modules/backgrounds";
 @import "modules/text-animation";
 @import "modules/font-loader";

@@ -1,7 +1,15 @@
 {% extends 'views/layout.html' %}
 
+{% block background %}
+<div class="stevie">
+	{{ stevie }}
+</div>
+{% endblock %}
+
 {% block content %}
-<h1 class="jitter-text">{{ 'scooba' | split() | safe }}</h1>
+<nav>
+	<h1 class="jitter-text">{{ 'scooba' | split() | safe }}</h1>
+</nav>
 <div class="fade">
 	<p>{{ description | split() | safe }}</p>
 	{% for list in lists %}
@@ -35,6 +43,5 @@
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec est scelerisque, sagittis mi in, feugiat sem. Sed ac augue nulla. Mauris malesuada turpis et neque ornare eleifend. Suspendisse quis pellentesque sem. Curabitur sed accumsan sapien, ut bibendum justo. In in diam nisl. Praesent quis nibh sem.
 		</p>
 	</section>
-	<h1>Stephen Cronin</h1>
 </div>
 {% endblock %}

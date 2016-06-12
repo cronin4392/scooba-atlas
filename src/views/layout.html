@@ -14,11 +14,17 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	<body>
-		<div class="background"></div>
-		<div class="s"></div>
-		<div class="cover"></div>
+		<div class="background">
+			<div class="hide-on-load">
+				<div class="glitch"></div>
+				<div class="s"></div>
+			</div>
+			<div class="cover-fade fade"></div>
+			{% block background %}{% endblock %}
+		</div>
 		<main class="container">
 			{% block content %}{% endblock %}
+			<h1>Stephen Cronin</h1>
 		</main>
 		{% include 'partials/font_loader.html' %}
 		{% include 'partials/ga.html' %}

@@ -1,0 +1,136 @@
+.list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+	position: relative;
+	white-space: nowrap;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+
+	$customScrollbar: false;
+
+	@if($customScrollbar) {
+		$scrollbarSize: 1.5em;
+		&::-webkit-scrollbar {
+			display: block;
+			position: relative;
+			height: $scrollbarSize;
+			width: $scrollbarSize;
+		}
+		&::-webkit-scrollbar-track {
+			
+		}
+		&::-webkit-scrollbar-track-piece {
+			display: none;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-bottom: 0.5em solid #f7f7f7;
+			&:hover {
+				border-bottom: 0.5em solid #e5e5e5;
+			}
+		}
+		&::-webkit-scrollbar-button:horizontal:end:increment,
+		&::-webkit-scrollbar-button:horizontal:end:decrement {
+			display: block;
+			height: $scrollbarSize;
+			width: $scrollbarSize;
+			cursor: pointer;
+			border: 1px solid #000000;
+
+			background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10' width='10' fill='red'><text x='0' y='10' fill='black' font-size='20'>&lt;</text></svg>");
+			background-position: center center;
+			background-repeat: no-repeat;
+
+			&:hover {
+				background-color: $yellow;
+			}
+		}
+		&::-webkit-scrollbar-button:horizontal:end:increment {
+			border-left: 0;
+			background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10' width='10' fill='red'><text x='0' y='10' fill='black' font-size='20'>&gt;</text></svg>");
+		}
+	}
+	@else {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	.item {
+		display: inline-block;
+		vertical-align: top;
+		white-space: normal;
+		width: 34%;
+		max-width: 320px;
+		min-width: 200px;
+		margin-right: 2em;
+	}
+}
+
+.item {
+	position: relative;
+	margin-bottom: 2.5em;
+
+	&-link {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+
+		.item-title {
+			@include underline($yellow, 4px, -2px);
+			padding-bottom: 4px;
+		}
+
+		&:hover .item-title {
+			@include underline($yellow, 12px, -10px);
+		}
+	}
+
+	&-image {
+		position: absolute;
+		top: 1em;
+		left: 1em;
+		width: 10em;
+		height: 10em;
+		z-index: -1;
+		opacity: 0.05;
+		visibility: hidden;
+
+		img {
+			position: absolute;
+			right: 0;
+			bottom: 2em;
+		}
+	}
+
+	&:hover &-image {
+		visibility: visible;
+	}
+
+	&-title,
+	&-text {
+		margin: 0;
+	}
+
+	&-title {
+		font-weight: 500;
+		line-height: 1.5;
+		margin-bottom: 0.2em;
+		display: inline;
+	}
+
+	&-text {
+		font-size: 0.75em;
+	}
+
+	&-date {
+		display: block;
+		font-weight: 100;
+		font-size: 0.75em;
+		margin-top: 1em;
+
+		white-space: nowrap;
+	}
+}
