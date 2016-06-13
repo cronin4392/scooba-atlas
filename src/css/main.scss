@@ -138,6 +138,9 @@ ul {
 	padding: 0;
 }
 
+article {
+	max-width: 48em;
+}
 
 p {
 	text-shadow: 1px 1px 0px #ffffff;
@@ -170,6 +173,20 @@ pre {
 	&:hover {
 		@include underline($yellow, 12px, -10px);
 	}
+}
+
+nav {
+	position: relative;
+}
+
+.box {
+	position: absolute;
+	top: 4em;
+	left: 17.5em;
+	z-index: -1;
+	height: 2em;
+	width: 2em;
+	background: $yellow;
 }
 
 @import "modules/list";
