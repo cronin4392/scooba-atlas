@@ -27,31 +27,33 @@
 			<h1>Stephen Cronin</h1>
 		</main>
 		<div class="outside">
-			<iframe src="https://sscooba.net">
+			<iframe src="">
 			</iframe>
 		</div>
 		{% include 'partials/font_loader.html' %}
 		{% include 'partials/ga.html' %}
+		<script src="js/clickout.js"></script>
 		<script>
+			var outside = document.getElementsByClassName("outside")[0];
 			var iframe = document.getElementsByTagName("iframe")[0];
 			var links = document.getElementsByTagName("a");
 			var clicklink = function(e) {
-				console.log(this, e.target.href);
-				iframe.classList.add('--active');
-				iframe.setAttribute('src', e.target.href);
+				var href = e.currentTarget.href;
+				outside.classList.add('--active');
+				iframe.setAttribute('src', href);
 				e.preventDefault();
 			}
 			for(var i = 0; i < links.length; i++ ) {
 				var link = links[i];
-				link.addEventListener('click', clicklink.bind(this));
+				if(link.href.substring(0,4) == 'http') {
+					link.addEventListener('click', clicklink.bind(this));
+				}
 			}
-			// var htmlElement = document.getElementsByTagName("html")[0];
-			// document.addEventListener('touchstart', function() {
-			// 	htmlElement.classList.add('glitch');
-			// 	setTimeout(function() {
-			// 		htmlElement.classList.remove('glitch');
-			// 	}, 10);
-			// });
+			var clickout = new Clickout(outside, function() {
+				iframe.setAttribute('src', '');
+				outside.classList.remove('--active');
+			});
+			clickout.activate();
 		</script>
 	</body>
 </html>
