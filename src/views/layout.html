@@ -26,9 +26,25 @@
 			{% block content %}{% endblock %}
 			<h1>Stephen Cronin</h1>
 		</main>
+		<div class="outside">
+			<iframe src="https://sscooba.net">
+			</iframe>
+		</div>
 		{% include 'partials/font_loader.html' %}
 		{% include 'partials/ga.html' %}
 		<script>
+			var iframe = document.getElementsByTagName("iframe")[0];
+			var links = document.getElementsByTagName("a");
+			var clicklink = function(e) {
+				console.log(this, e.target.href);
+				iframe.classList.add('--active');
+				iframe.setAttribute('src', e.target.href);
+				e.preventDefault();
+			}
+			for(var i = 0; i < links.length; i++ ) {
+				var link = links[i];
+				link.addEventListener('click', clicklink.bind(this));
+			}
 			// var htmlElement = document.getElementsByTagName("html")[0];
 			// document.addEventListener('touchstart', function() {
 			// 	htmlElement.classList.add('glitch');

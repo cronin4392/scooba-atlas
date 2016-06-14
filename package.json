@@ -9,7 +9,7 @@
     "build:fonts": "ncp ./src/fonts ./build/fonts",
     "build:images": "ncp ./src/images ./build/images",
     "watch:css": "chokidar-cmd -c 'npm run build:css' -t ./src/css",
-    "watch:html": "chokidar-cmd -c 'npm run build:html' -t ./src/*.html -t ./src/data",
+    "watch:html": "chokidar-cmd -c 'npm run build:html' -t ./src/*.html -t ./src/data -t ./src/views/*.html",
     "watch": "npm run watch:css & npm run watch:html",
     "dev": "npm run build && npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
