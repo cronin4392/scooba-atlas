@@ -73,10 +73,10 @@
 	font-weight: 700;
 	line-height: 0.6;
 	white-space: pre;
+	color: #222222;
 	text-align: right;
 
 	animation: fadein 1000ms linear; // typechange 500ms infinite alternate,
-	opacity: 0.5;
 }
 
 .cover-fade {
@@ -85,9 +85,10 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: -10;
+	z-index: 1;
 
 	$offset: 60vh;
+	// open at the bottom
 	// background: linear-gradient(180deg,
 	// 	                        rgba(255,255,255,0.2) 0%,
 	// 	                        rgba(255,255,255,0.75) $offset,
