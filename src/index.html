@@ -30,7 +30,7 @@
 					</h3>
 					<div class="item-text">{{item['description'] | safe}}</div>
 					{% if item['date'] %}
-					<date class="item-date">[{{item['date']}}]</date>
+					<date class="item-date">[{{item['date'] | date('M. d Y')}}]</date>
 					{% endif %}
 				{% if item['link'] %}</a>{% endif %}
 			</li>

@@ -1,3 +1,4 @@
+//http://www.epochconverter.com/
 {
 	"description": "Kung fu fightin' calligraphy writin' developer stationed in NYC. My style is chaos mixed in with a bit of structure. I code with speed and visual efficiency. Drop a line if you're so inclined.",
 	"lists": [
@@ -20,33 +21,33 @@
 					"description": "<p>HYPERHYPER®'s online portfolio</p>",
 					"link": "http://hyperhyper.com",
 					"image": "projects/HH.svg",
-					"date": "May. 2016"
+					"date": 1462060800000
 				},
 				{
 					"title": "PHHHOTO Support",
 					"description": "<p>PHHHOTO® support portal</p>",
 					"link": "http://support.phhhoto.com",
 					"image": "projects/PHHHOTO.svg",
-					"date": "Jan. 2016"
+					"date": 1451606400000
 				},
 				{
 					"title": "PHHHOTO.com",
 					"description": "<p>PHHHOTO® web interface</p>",
 					"link": "http://phhhoto.com",
 					"image": "projects/PHHHOTO.svg",
-					"date": "Feb. 2015"
+					"date": 1422748800000
 				},
 				{
 					"title": "Scooba x Harinezumi",
 					"description": "<p>Scooba and the Superheadz Harinezumi from New York to Western Europe.</p>",
 					"link": "http://project.sscooba.net/harinezumi",
-					"date": "Aug. 2014"
+					"date": 1406851200000
 				},
 				{
 					"title": "Dr Pepper Tuition",
 					"description": "<p>Created the front-end system used since 2014.</p>",
 					"link": "http://drpeppertuition.com",
-					"date": "Jun. 2014"
+					"date": 1401580800000
 				}
 			]
 		},
