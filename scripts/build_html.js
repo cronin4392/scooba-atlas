@@ -37,29 +37,28 @@ if (process.env.NODE_ENV !== "production"){
 	debug = true;
 }
 
-try {
-	var data = JSON.parse(fs.readFileSync(data_file));
-	var stevie = String(fs.readFileSync(stevie_file));
-	var stevie_small = String(fs.readFileSync(stevie_file_small));
-	data['stevie'] = stevie;
-	data['stevie_small'] = stevie_small;
+var data = JSON.parse(fs.readFileSync(data_file));
+var stevie = String(fs.readFileSync(stevie_file));
+var stevie_small = String(fs.readFileSync(stevie_file_small));
+data['stevie'] = stevie;
+data['stevie_small'] = stevie_small;
 
-	async.each(file_sets, function(files) {
-		var input_file = files[0];
-		var output_file = files[1];
+async.each(file_sets, function(files) {
+	var input_file = files[0];
+	var output_file = files[1];
 
-		var template = swig.compileFile(input_file);
-		var html = template(data);
+	var template = swig.compileFile(input_file);
+	var html = template(data);
 
+	try {
 		fs.writeFile(output_file, html, function(err,data){
 			process.exit(code=0);
 		});
-	});
-
-}catch(err){
-	process.stderr.write('HTML BUILD ERROR\n');
-	console.log(err);
-	// process.stderr.write(err);
-	// process.stderr.write('\n');
-	process.exit(code=0);
-}
+	}catch(err){
+		process.stderr.write('HTML BUILD ERROR\n');
+		console.log(err);
+		// process.stderr.write(err);
+		// process.stderr.write('\n');
+		process.exit(code=0);
+	}
+});
