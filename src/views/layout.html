@@ -34,26 +34,26 @@
 		{% include 'partials/ga.html' %}
 		<script src="js/clickout.js"></script>
 		<script>
-			var outside = document.getElementsByClassName("outside")[0];
-			var iframe = document.getElementsByTagName("iframe")[0];
-			var links = document.getElementsByTagName("a");
-			var clicklink = function(e) {
-				var href = e.currentTarget.href;
-				outside.classList.add('--active');
-				iframe.setAttribute('src', href);
-				e.preventDefault();
-			}
-			for(var i = 0; i < links.length; i++ ) {
-				var link = links[i];
-				if(link.href.substring(0,4) == 'http') {
-					link.addEventListener('click', clicklink.bind(this));
-				}
-			}
-			var clickout = new Clickout(outside, function() {
-				iframe.setAttribute('src', '');
-				outside.classList.remove('--active');
-			});
-			clickout.activate();
+			// var outside = document.getElementsByClassName("outside")[0];
+			// var iframe = document.getElementsByTagName("iframe")[0];
+			// var links = document.getElementsByTagName("a");
+			// var clicklink = function(e) {
+			// 	var href = e.currentTarget.href;
+			// 	outside.classList.add('--active');
+			// 	iframe.setAttribute('src', href);
+			// 	e.preventDefault();
+			// }
+			// for(var i = 0; i < links.length; i++ ) {
+			// 	var link = links[i];
+			// 	if(link.href.substring(0,4) == 'http') {
+			// 		link.addEventListener('click', clicklink.bind(this));
+			// 	}
+			// }
+			// var clickout = new Clickout(outside, function() {
+			// 	iframe.setAttribute('src', '');
+			// 	outside.classList.remove('--active');
+			// });
+			// clickout.activate();
 		</script>
 	</body>
 </html>
