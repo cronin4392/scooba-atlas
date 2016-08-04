@@ -1,6 +1,8 @@
 var async = require('async');
 var swig = require('swig');
 var fs = require('fs');
+var moment = require('moment');
+var _ = require('lodash');
 var debug = false;
 
 function chunkString(str, length) {
@@ -30,18 +32,23 @@ swig.setFilter('duplicate', duplicate);
 
 var file_sets = [['./src/index.html', './build/index.html'], ['./src/blog.html', './build/blog.html']];
 var data_file = './src/data/main.json';
-var stevie_file = './src/views/partials/stevie-alt.txt';
-var stevie_file_small = './src/views/partials/stevie-medium.txt';
 
 if (process.env.NODE_ENV !== "production"){
 	debug = true;
 }
 
 var data = JSON.parse(fs.readFileSync(data_file));
-var stevie = String(fs.readFileSync(stevie_file));
-var stevie_small = String(fs.readFileSync(stevie_file_small));
-data['stevie'] = stevie;
-data['stevie_small'] = stevie_small;
+
+data['lists'] = _.map(data['lists'], function(list) {
+	list['items'] = _.map(list['items'], function(item) {
+		if(item['date']) {
+			var date = Number(moment(item['date'], "MMMM YYYY").format('x'));
+			item['date'] = date;
+		}
+		return item;
+	})
+	return list;
+})
 
 async.each(file_sets, function(files) {
 	var input_file = files[0];

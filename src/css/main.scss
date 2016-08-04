@@ -87,13 +87,13 @@ body {
 	}
 }
 
-.hide-on-load {
-	animation: turnon 1000ms steps(1) forwards;
-}
+// .hide-on-load {
+// 	animation: turnon 1000ms steps(1) forwards;
+// }
 
-.fade {
-	animation: fadein 2.25s linear;
-}
+// .fade {
+// 	animation: fadein 2.25s linear;
+// }
 
 img {
 	max-width: 100%;
@@ -153,7 +153,7 @@ p.small {
 	max-width: 64em;
 }
 
-p:hover {
+p.jitter:hover {
 	@include jitter(40, 40ms, true);
 }
 

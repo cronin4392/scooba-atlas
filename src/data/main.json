@@ -8,7 +8,7 @@
 					"title": "Useful front-end snippets",
 					"link": "blog.html",
 					"description": "",
-					"date": "June. 2016"
+					"date": "June 2016"
 				}
 			]
 		},
@@ -20,33 +20,46 @@
 					"description": "<p>HYPERHYPER®'s online portfolio</p>",
 					"link": "http://hyperhyper.com",
 					"image": "projects/HH.svg",
-					"date": 1462060800000
+					"date": "May 2016"
 				},
 				{
 					"title": "PHHHOTO Support",
 					"description": "<p>PHHHOTO® support portal</p>",
 					"link": "http://support.phhhoto.com",
 					"image": "projects/PHHHOTO.svg",
-					"date": 1451606400000
+					"date": "April 2016"
 				},
 				{
 					"title": "PHHHOTO.com",
 					"description": "<p>PHHHOTO® web interface</p>",
 					"link": "http://phhhoto.com",
 					"image": "projects/PHHHOTO.svg",
-					"date": 1422748800000
+					"date": "February 2015"
 				},
 				{
 					"title": "Scooba x Harinezumi",
 					"description": "<p>Scooba and the Superheadz Harinezumi from New York to Western Europe.</p>",
 					"link": "http://project.sscooba.net/harinezumi",
-					"date": 1406851200000
+					"date": "August 2014"
 				},
 				{
 					"title": "Dr Pepper Tuition",
 					"description": "<p>Created the front-end system used since 2014.</p>",
 					"link": "http://drpeppertuition.com",
-					"date": 1401580800000
+					"date": "June 2014"
+				},
+				{
+					"title": "Garnier USA.com",
+					"description": "<p>8 month intensive front-end only project. Lead a front-end team to create a responsive experience for the US market.</p>",
+					"link": "http://www.garnierusa.com/",
+					"date": "November 2013"
+				},
+				{
+					"title": "Code and Theory.com",
+					"description": "<p>Was apart of the redesign development team. Focused on the grid system and article modules.</p>",
+					"link": "http://www.codeandtheory.com/",
+					"image": "projects/C&T.png",
+					"date": "August 2013"
 				}
 			]
 		},
@@ -56,17 +69,20 @@
 				{
 					"title": "addEventListener('transition')",
 					"description": "<p>Add javascript events for CSS transtions and animations.</p>",
-					"link": "https://github.com/cronin4392/CSS-Animation-and-Transition-Listeners"
+					"link": "https://github.com/cronin4392/CSS-Animation-and-Transition-Listeners",
+					"date": "March 2016"
 				},
 				{
 					"title": "video.addEventListener('buffer')",
 					"description": "<p>Add javascript event for HTML Video buffering.</p>",
-					"link": "https://github.com/cronin4392/video-buffer-event"
+					"link": "https://github.com/cronin4392/video-buffer-event",
+					"date": "March 2016"
 				},
 				{
 					"title": "addEventListener('clickout')",
 					"description": "<p>Add javascript event clicking out of an element.</p>",
-					"link": "https://github.com/cronin4392/clickout"
+					"link": "https://github.com/cronin4392/clickout",
+					"date": "June 2014"
 				}
 			]
 		},
@@ -78,65 +94,62 @@
 					"link": "http://www.theintercept.com",
 					"image": "projects/FLM.png",
 					"description": "<p>Senior engineer.</p>",
-					"date": "2016.05 - Current"
+					"date": "May 2015"
 				},
 				{
 					"title": "Type@Cooper - Calligraphy: The Italic Hand",
 					"image": "projects/type_at_cooper.svg",
 					"description": "<p>A 10 week course covering the italic hand taught by Cara DiEdwardo.</p>",
-					"date": "2016.02 - 2013.04"
+					"date": "February 2016",
+					"date_start": "April 2016"
 				},
 				{
 					"title": "PHHHOTO / HyperHyper",
 					"link": "http://www.hyperhyper.com",
 					"image": "projects/HH.svg",
 					"description": "<p>Front-end lead at the New York office of HyperHyper, the creators of PHHHOTO.</p>",
-					"date": "2015.01 - 2016.05"
+					"date": "January 2015",
+					"date_start": "May 2016"
 				},
 				{
 					"title": "Code and Theory",
 					"link": "http://www.codeandtheory.com",
 					"image": "projects/C&T.png",
 					"description": "<p>Sr. Developer <br>Jr. Developer</p>",
-					"date": "2011.11 - 2014.08"
+					"date": "November 2011",
+					"date_start": "August 2014"
 				},
 				{
 					"title": "Type@Cooper - Introduction to Sign Painting",
 					"image": "projects/type_at_cooper.svg",
 					"description": "<p>A week long intensive class in traditional sign painting taught by John Downer</p>",
-					"date": "2013.04 - 2013.04"
-				},
-				{
-					"title": "Sociology 101 at Hunter College",
-					"description": "<p>Cool class.</p>",
-					"date": "2013.02 - 2013.05"
+					"date": "April 2013"
 				},
 				{
 					"title": "Alien Kung Fu",
 					"link": "http://www.alienkungfu.com",
 					"description": "<p>Produced website. <br>Created motion graphic assets for video work.</p>",
-					"date": "2007.03 – 2011.08"
+					"date": "March 2010",
+					"date_start": "August 2011"
 				},
 				{
 					"title": "Parsons The New School for Design",
 					"description": "<p>Design and Technology - 2 semesters <br>Jane Jacobs</p>",
-					"date": "2010.08 - 2011.05"
+					"date": "August 2010",
+					"date_start": "May 2011"
 				},
 				{
 					"title": "Artists for Humanity",
 					"link": "http://www.afhboston.org",
 					"description": "<p>Graphic Design. <br>Silk Screening.</p>",
-					"date": "2007.03 – 2011.08"
+					"date": "March 2007",
+					"date_start": "August 2011"
 				},
 				{
 					"title": "Boston Latin School",
 					"description": "<p>7th grade. <br>A.P. Computer Science A <br>Adobe Flash awards 2009 & 2010</p>",
-					"date": "2004.09 - 2010.05"
-				},
-				{
-					"title": "Balfour Academy",
-					"description": "<p>Summer program at Northeastern University for Boston youth. Took courses to prepare for college.</p>",
-					"date": "2006.06 - 2009.08"
+					"date": "September 2004",
+					"date_start": "May 2010"
 				}
 			]
 		}

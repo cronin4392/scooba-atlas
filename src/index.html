@@ -9,7 +9,7 @@
 	<span class="box"></span>
 </nav>
 <div class="fade">
-	<p>{{ description | split() | safe }}</p>
+	<p class="jitter">{{ description | split() | safe }}</p>
 	{% for list in lists %}
 	<section>
 		<h2>{{ list['title'] }}</h2>
@@ -27,7 +27,7 @@
 					</h3>
 					<div class="item-text">{{item['description'] | safe}}</div>
 					{% if item['date'] %}
-					<date class="item-date">[{{item['date'] | date('M. d Y')}}]</date>
+					<date class="item-date">[{{item['date'] | date('M. Y')}}]</date>
 					{% endif %}
 				{% if item['link'] %}</a>{% endif %}
 			</li>
@@ -38,7 +38,11 @@
 	<section>
 		<h2>Boo ya ca-sha</h2>
 		<p class="small">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec est scelerisque, sagittis mi in, feugiat sem. Sed ac augue nulla. Mauris malesuada turpis et neque ornare eleifend. Suspendisse quis pellentesque sem. Curabitur sed accumsan sapien, ut bibendum justo. In in diam nisl. Praesent quis nibh sem.
+			This is the third major iteration of my personal website 
+			[<a href="http://scoobasteve.org">v1</a> and <a href="http://sscooba.net">v2</a>]. 
+			The build is static html generated through npm scripts. No browser javascript was used in the making. 
+			I try my hardest to be crafty with CSS. 
+			The font used is <a href="http://carvalho-bernau.com/atlas/" target="_BLANK">atlas typewriter</a>.
 		</p>
 	</section>
 </div>
