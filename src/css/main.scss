@@ -7,7 +7,6 @@ body {
 	font-family: 'Atlas Typewriter Web', monospace;
 	font-size: 20px;
 	line-height: 2;
-	animation: fontsize 25s linear infinite alternate;
 	margin: 0;
 	padding: 0;
 }
@@ -93,7 +92,7 @@ body {
 }
 
 .fade {
-	animation: fadein 3s linear;
+	animation: fadein 2.25s linear;
 }
 
 img {
