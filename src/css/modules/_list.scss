@@ -5,9 +5,12 @@
 	padding-bottom: 1em;
 
 	position: relative;
-	white-space: nowrap;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
+
+	@media screen and (max-width: 1000px) {
+		white-space: nowrap;
+	}
 
 	$customScrollbar: false;
 
@@ -62,7 +65,7 @@
 		display: inline-block;
 		vertical-align: top;
 		white-space: normal;
-		width: 34%;
+		width: calc(33.333% - 2.45em);
 		max-width: 320px;
 		min-width: 200px;
 		margin-right: 2em;

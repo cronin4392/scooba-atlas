@@ -34,12 +34,7 @@ body {
 	width: auto;
 }
 
-@media screen and (max-width: 1000px) {
-	html,
-	body {
-		font-size: 18px;
-	}
-
+@media screen and (max-width: 1200px) {
 	.container {
 		padding-left: 4em;
 		padding-right: 4em;
@@ -50,6 +45,13 @@ body {
 		margin-right: -4em;
 		padding-left: 4em;
 		padding-right: 4em;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	html,
+	body {
+		font-size: 18px;
 	}
 }
 
