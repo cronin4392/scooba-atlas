@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html class="blank">
 	<head>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 		<title>sssssssssc</title>
@@ -7,26 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
 		<meta property="og:title" content="sssssssssc" />
-		<meta property="og:description" content="hallo" />
-		<meta property="og:image" content="http://www.scoobasteve.com/images/image.png" />
+		<meta property="og:description" content="bleep bloop" />
+		<meta property="og:image" content="http://www.scoobasteve.com/images/oompa.jpg" />
 
 		<link rel="stylesheet" type="text/css" href="fonts/atlas.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		{% block head %}{% endblock %}
 	</head>
 	<body>
-		<div class="background">
-			<div class="hide-on-load">
-				<div class="glitch"></div>
-				<div class="s"></div>
-			</div>
-			{% block background %}{% endblock %}
-		</div>
-		<main class="container">
-			{% block content %}{% endblock %}
-			<h1>Stephen Cronin</h1>
-		</main>
-		{% include 'partials/font_loader.html' %}
+		{% block content %}{% endblock %}
 		{% include 'partials/ga.html' %}
 	</body>
 </html>

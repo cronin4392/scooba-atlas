@@ -26,8 +26,14 @@
 						{{item['title']}}
 					</h3>
 					<div class="item-text">{{item['description'] | safe}}</div>
-					{% if item['date'] %}
-					<date class="item-date">[{{item['date'] | date('M. Y')}}]</date>
+					{% if item['date'] && item['date_end'] %}
+					<div class="item-date">
+						[<date>{{item['date'] | date('M. Y')}}</date> &mdash; <date>{{item['date_end'] | date('M. Y')}}</date>]
+					</div>
+					{% elseif item['date'] %}
+					<div class="item-date">
+						[<date>{{item['date'] | date('M. Y')}}</date>]
+					</div>
 					{% endif %}
 				{% if item['link'] %}</a>{% endif %}
 			</li>

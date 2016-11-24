@@ -94,14 +94,15 @@
 					"link": "http://www.theintercept.com",
 					"image": "projects/FLM.png",
 					"description": "<p>Senior engineer.</p>",
-					"date": "May 2015"
+					"date": "May 2016",
+					"date_end": "September 2016"
 				},
 				{
 					"title": "Type@Cooper - Calligraphy: The Italic Hand",
 					"image": "projects/type_at_cooper.svg",
 					"description": "<p>A 10 week course covering the italic hand taught by Cara DiEdwardo.</p>",
 					"date": "February 2016",
-					"date_start": "April 2016"
+					"date_end": "April 2016"
 				},
 				{
 					"title": "PHHHOTO / HyperHyper",
@@ -109,7 +110,7 @@
 					"image": "projects/HH.svg",
 					"description": "<p>Front-end lead at the New York office of HyperHyper, the creators of PHHHOTO.</p>",
 					"date": "January 2015",
-					"date_start": "May 2016"
+					"date_end": "May 2016"
 				},
 				{
 					"title": "Code and Theory",
@@ -117,7 +118,7 @@
 					"image": "projects/C&T.png",
 					"description": "<p>Sr. Developer <br>Jr. Developer</p>",
 					"date": "November 2011",
-					"date_start": "August 2014"
+					"date_end": "August 2014"
 				},
 				{
 					"title": "Type@Cooper - Introduction to Sign Painting",
@@ -130,26 +131,26 @@
 					"link": "http://www.alienkungfu.com",
 					"description": "<p>Produced website. <br>Created motion graphic assets for video work.</p>",
 					"date": "March 2010",
-					"date_start": "August 2011"
+					"date_end": "August 2011"
 				},
 				{
 					"title": "Parsons The New School for Design",
 					"description": "<p>Design and Technology - 2 semesters <br>Jane Jacobs</p>",
 					"date": "August 2010",
-					"date_start": "May 2011"
+					"date_end": "May 2011"
 				},
 				{
 					"title": "Artists for Humanity",
 					"link": "http://www.afhboston.org",
 					"description": "<p>Graphic Design. <br>Silk Screening.</p>",
 					"date": "March 2007",
-					"date_start": "August 2011"
+					"date_end": "August 2011"
 				},
 				{
 					"title": "Boston Latin School",
 					"description": "<p>7th grade. <br>A.P. Computer Science A <br>Adobe Flash awards 2009 & 2010</p>",
 					"date": "September 2004",
-					"date_start": "May 2010"
+					"date_end": "May 2010"
 				}
 			]
 		}

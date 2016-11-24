@@ -1,0 +1,86 @@
+$timing: 10s;
+
+.blank,
+.blank body {
+    height: 100%;
+    width: 100%;
+}
+
+.blank body {
+    background: red;
+}
+
+.fun {
+    box-sizing: border-box;
+    width: 200%;
+    height: 100%;
+    padding: 5em 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transform-origin: 25% 50%;
+
+    animation: rotate ($timing * 5) infinite ease-in-out;
+}
+
+.fun:before {
+    content: "";
+    height: 100%;
+}
+
+.fun span {
+    font-size: 1.3em;
+    line-height: 0;
+
+    animation: fontSizeChange2 $timing infinite alternate ease-in-out;
+
+    span {
+        margin-left: -0.1em;
+
+        // animation: fontSizeChange $timing infinite alternate ease-in-out, marginChange $timing infinite alternate ease-in-out;
+    }
+}
+
+.fun:before,
+.fun span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@keyframes invert {
+    from {
+        filter: invert(0%);
+    }
+    to {
+        filter: invert(100%);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes fontSizeChange2 {
+    from {
+        font-size: 0em;
+    }
+
+    to {
+        font-size: 4em;
+    }
+}
+
+
+@keyframes marginChange {
+    from {
+        margin-left: -0.1em;
+    }
+
+    to {
+        margin-left: -0.4em;
+    }
+}

@@ -94,7 +94,7 @@ body {
 }
 
 .fade {
-	animation: fadein 2.25s linear;
+	// animation: fadein 2.25s linear;
 }
 
 img {
@@ -197,3 +197,5 @@ nav {
 @import "modules/backgrounds";
 @import "modules/text-animation";
 @import "modules/font-loader";
+
+@import "page/fun";
