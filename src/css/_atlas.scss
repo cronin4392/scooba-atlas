@@ -1,0 +1,149 @@
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2016 Schwartzco Inc.
+        License: 1606-AYQGLY     
+*/
+
+$hostingPath: "https://s3.amazonaws.com/com.scoobasteve/fonts/";
+
+@function hosting-path($file) {
+  @return $hostingPath + $file;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-BlackItalic-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-BlackItalic-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-BlackItalic-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-BlackItalic-Web.woff')) format('woff');
+  font-weight:  900;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-Black-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-Black-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-Black-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-Black-Web.woff')) format('woff');
+  font-weight:  900;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-BoldItalic-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-BoldItalic-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-BoldItalic-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-BoldItalic-Web.woff')) format('woff');
+  font-weight:  700;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-Bold-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-Bold-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-Bold-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-Bold-Web.woff')) format('woff');
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-MediumItalic-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-MediumItalic-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-MediumItalic-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-MediumItalic-Web.woff')) format('woff');
+  font-weight:  500;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-Medium-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-Medium-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-Medium-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-Medium-Web.woff')) format('woff');
+  font-weight:  500;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-RegularItalic-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-RegularItalic-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-RegularItalic-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-RegularItalic-Web.woff')) format('woff');
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-Regular-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-Regular-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-Regular-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-Regular-Web.woff')) format('woff');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-LightItalic-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-LightItalic-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-LightItalic-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-LightItalic-Web.woff')) format('woff');
+  font-weight:  300;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-Light-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-Light-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-Light-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-Light-Web.woff')) format('woff');
+  font-weight:  300;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-ThinItalic-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-ThinItalic-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-ThinItalic-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-ThinItalic-Web.woff')) format('woff');
+  font-weight:  100;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter Web';
+  src: url(hosting-path('AtlasTypewriter-Thin-Web.eot'));
+  src: url(hosting-path('AtlasTypewriter-Thin-Web.eot?#iefix')) format('embedded-opentype'),
+       url(hosting-path('AtlasTypewriter-Thin-Web.woff2')) format('woff2'),
+       url(hosting-path('AtlasTypewriter-Thin-Web.woff')) format('woff');
+  font-weight:  100;
+  font-style:   normal;
+  font-stretch: normal;
+}
