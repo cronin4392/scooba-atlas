@@ -30,7 +30,7 @@ var duplicate = function(input, times) {
 }
 swig.setFilter('duplicate', duplicate);
 
-var file_sets = [['./src/index.html', './build/index.html'], ['./src/blog.html', './build/blog.html'], ['./src/fun.html', './build/fun.html']];
+var file_sets = [['./src/index.html', './build/index.html'], ['./src/blog.html', './build/blog.html'], ['./src/fun.html', './build/fun.html'], ['./src/fun2.html', './build/fun2.html']];
 var data_file = './src/data/main.json';
 
 if (process.env.NODE_ENV !== "production"){

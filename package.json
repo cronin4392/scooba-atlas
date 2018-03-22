@@ -3,22 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npm run build:css && npm run build:html && npm run build:fonts && npm run build:images",
+    "build": "npm run build:css && npm run build:html && npm run build:js && npm run build:fonts && npm run build:images",
     "build:css": "node ./scripts/build_css.js",
     "build:html": "node ./scripts/build_html.js",
     "build:fonts": "ncp ./src/fonts ./build/fonts",
     "build:images": "ncp ./src/images ./build/images",
+    "build:js": "ncp ./src/js ./build/js",
     "watch:css": "chokidar-cmd -c 'npm run build:css' -t ./src/css",
     "watch:html": "chokidar-cmd -c 'npm run build:html' -t ./src/*.html -t ./src/data -t ./src/views/*.html",
-    "watch": "npm run watch:css & npm run watch:html",
+    "watch:js": "chokidar-cmd -c 'npm run build:js' -t ./src/js",
+    "watch": "npm run watch:css & npm run watch:html & npm run watch:js",
     "dev": "npm run build && npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Stephen Cronin",
   "license": "ISC",
   "dependencies": {
+  },
+  "devDependencies": {
     "async": "^2.0.0-rc.6",
     "autoprefixer": "^6.3.6",
+    "chokidar-cmd": "^1.2.1",
     "combine-mq": "^0.8.1",
     "fs": "0.0.2",
     "lodash": "^4.14.1",
@@ -26,8 +31,5 @@
     "ncp": "^2.0.0",
     "node-sass": "^3.7.0",
     "swig": "^1.4.2"
-  },
-  "devDependencies": {
-    "chokidar-cmd": "^1.2.1"
   }
 }
